@@ -1,0 +1,105 @@
+// Обнуление стандартных стилей
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+    color: #000
+    font-weight: 400
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+    display: block
+html
+    height: 100%
+body
+    line-height: 1
+ol,ul
+    list-style: none
+blockquote:before,blockquote:after,q:before,q:after
+    content: ''
+    content: none
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+// Обнуление стандартных стилей
+
+
+body
+    max-width: 100vw
+    overflow-x: hidden   
+
+h1
+    font-size: 5.1rem
+    color: #494949
+    font-weight: 600
+    line-height: 55px
+    margin: 85px 0 30px 0
+
+
+main
+.index__page
+    position: relative
+    max-width: 1920px
+    height: 2930px
+    background-image: url(../img/index-page/index-bg.png)
+    background-position-x: center
+
+
+.callback_btn
+    a
+        font-size: 1.6rem
+        padding: 15px 40px
+        border-radius: 30px
+        border: 2px solid #C7CD9F
+        display: block
+        line-height: initial
+    :hover
+        background-color: #C7CD9F
+        color: #fff
+        transition: 0.3s
+
+.callback__form
+    .callback__btn
+        div
+            font-size: 1.6rem
+            padding: 15px 40px
+            border-radius: 30px
+            border: 2px solid #C7CD9F
+            display: block
+            line-height: initial
+        :hover
+            background-color: #C7CD9F
+            color: #fff
+            transition: 0.3s
+.callback__form
+    padding: 45px 0
+    .callback__form_title
+        color: #5A3A51
+        font-weight: 600
+        font-size: 2rem
+        text-align: center
+        margin-bottom: 25px
+    .callback__form_container
+        align-items: center
+        display: flex
+        flex-direction: column
+        input
+            border: 1px solid #D7D7D7
+            padding: 10px 12px
+        :not(:last-child)
+            margin-bottom: 5px
+        :focus
+            outline: none
+        :active
+            outline: none
+        .agree
+            margin: 25px 0
+            .callback__form_agree
+                font-size: 1.3rem
+                a
+                    text-decoration: underline
+                :hover
+                    color: #C7CD9F
+                    transition: 0.3s
