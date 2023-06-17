@@ -36,6 +36,15 @@ table {
   border-spacing: 0;
 }
 
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -46,7 +55,7 @@ h1 {
   color: #494949;
   font-weight: 600;
   line-height: 55px;
-  margin: 85px 0 30px 0;
+  margin: 0px 0 30px 0;
 }
 
 .index__page {
@@ -87,6 +96,7 @@ h1 {
 
 .callback__form {
   padding: 45px 0;
+  background-color: #fff;
 }
 .callback__form .callback__form_title {
   color: #5A3A51;
@@ -129,7 +139,7 @@ h1 {
 
 #header {
   position: absolute;
-  width: 1360px;
+  width: 1400px;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
@@ -269,7 +279,7 @@ body {
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: center;
-  padding-top: 60px;
+  padding-top: 150px;
 }
 
 .index__start .index__titles .index__titles_subtitle {
@@ -277,7 +287,7 @@ body {
   color: #494949;
   font-weight: 600;
   line-height: 55px;
-  margin: 85px 0 30px 0;
+  margin: 0px 0 30px 0;
 }
 .index__start .index__titles .index__titles_name {
   font-size: 7.7rem;
@@ -312,7 +322,7 @@ body {
 }
 .logo img {
   max-width: 90%;
-  margin: 15% 0 0 0;
+  margin: 3% 0 0 0;
 }
 
 .index__help {
@@ -421,7 +431,7 @@ body {
   padding: 0 0 40px 0;
 }
 .business__start .title {
-  margin: 110px 0 30px 0;
+  margin: 85px 0 30px 0;
   color: #FB8585;
   font-size: 2.4rem;
   font-weight: 600;
@@ -444,6 +454,212 @@ body {
   list-style-type: disc;
 }
 
+.registartion {
+  margin: 8% 0 4% 0;
+}
+
+.default__title {
+  color: #5A3A51;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  margin: 0 0 20px 0;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.col-xl-6 .default__form {
+  max-width: 100%;
+}
+.col-xl-6 .default__form .input__list {
+  width: 100%;
+}
+.col-xl-6 .default__form .input__list input {
+  width: 100% !important;
+}
+
+.default__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.default__form .input__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.default__form .input__list input {
+  border: 1px solid #D7D7D7;
+  padding: 10px 12px;
+  width: 50%;
+}
+.default__form .input__list :not(:last-child) {
+  margin-bottom: 5px;
+}
+.default__form .input__list :focus {
+  outline: none;
+}
+.default__form .input__list :active {
+  outline: none;
+}
+.default__form .input__list .agree {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.default__form .input__list .agree input {
+  width: initial;
+  margin: 0 10px 0 0;
+  border-radius: 0;
+}
+.default__form .input__list .agree .callback__form_agree {
+  font-size: 1.3rem;
+}
+.default__form .input__list .agree .callback__form_agree a {
+  text-decoration: underline;
+}
+.default__form .input__list .agree .callback__form_agree :hover {
+  color: #C7CD9F;
+  transition: 0.3s;
+}
+.default__form .input__list .agree .verify__code {
+  line-height: 22px;
+  text-align: center;
+}
+.default__form .input__list .callback__btn div {
+  font-size: 1.6rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: 2px solid #C7CD9F;
+  display: block;
+  line-height: initial;
+}
+.default__form .input__list .callback__btn :hover {
+  background-color: #C7CD9F;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.profile {
+  padding: 0 0 40px 0;
+}
+
+.consultations {
+  background-color: #f4f4f4;
+}
+.consultations .consultations__container {
+  background-color: #fff;
+  border-bottom: 4px solid #F4F4F4;
+}
+.consultations .consultations__container .consultations__item {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+}
+.consultations .consultations__container .consultations__item .consultations_main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+.consultations .consultations__container .consultations__item .consultations_main .consultations__date {
+  width: 100%;
+  margin: 15px 0 20px 0;
+}
+.consultations .consultations__container .consultations__item .consultations_main .consultations__date span {
+  color: #5A3A51;
+  font-weight: 600;
+}
+.consultations .consultations__container .consultations__item .consultations_main .consultations__item_desc {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 0;
+  margin: 0 30px 15px 0;
+}
+.consultations .consultations__container .consultations__item .consultations_main .consultations__item_desc .title {
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.consultations .consultations__container .consultations__item .consultations__buy {
+  display: flex;
+  height: 100%;
+}
+.consultations .consultations__container .consultations__item .consultations__buy button {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  padding: 55px 35px;
+  width: 150px;
+}
+.consultations .consultations__container .consultations__item .consultations__buy :hover {
+  transition: 0.3s;
+  transform: scale(1.03);
+}
+.consultations .consultations__container .consultations__item .buy button {
+  background-color: #FFC700;
+  color: #000;
+}
+.consultations .consultations__container .consultations__item .consultations__start {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 30px;
+}
+.consultations .consultations__container .consultations__item .consultations__start a {
+  color: #5A3A51;
+  font-weight: 600;
+}
+.consultations .consultations__container .consultations__item .consultations__start :hover {
+  text-decoration: underline;
+}
+.consultations #purchased .cancel button {
+  background-color: #836B7D;
+  color: #fff;
+}
+.consultations .passed #off a {
+  color: #E0E0E0;
+}
+.consultations .passed #off :hover {
+  text-decoration: none;
+}
+
+#consultations_passed {
+  padding: 30px 0 0 0;
+}
+#consultations_passed .consultations__container {
+  background-color: #ececec;
+}
+#consultations_passed .consultations__container * {
+  color: #9d9d9d !important;
+}
+
+#consultations_active > .row:first-child {
+  border-bottom: 2px solid #FFC700;
+}
+
+#consultations_passed {
+  padding: 30px 0 0 0;
+}
+#consultations_passed .consultations__container:first-child {
+  border-top: 2px solid #FC7C9D;
+}
+
 @media (min-width: 992px) {
   body {
     position: relative;
@@ -453,7 +669,7 @@ body {
     padding: 0 0;
   }
   #header .container {
-    max-width: 1360px;
+    max-width: 1400px;
   }
   .mobile__header {
     display: none;
@@ -486,13 +702,6 @@ body {
   }
 }
 @media (max-width: 992px) {
-  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    padding: 0;
-    margin: 0;
-  }
-  .row {
-    margin: 0;
-  }
   body {
     padding: 0;
     max-width: 100vw;
@@ -617,5 +826,20 @@ body {
     background-image: none;
     background-color: #F4F4F4;
     padding: 30px 0;
+  }
+  .registartion {
+    margin: 15% 0 10% 0;
+  }
+  .default__form {
+    max-width: 100%;
+  }
+  .default__form .input__list input {
+    width: 100%;
+  }
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 20px;
   }
 }
