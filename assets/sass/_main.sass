@@ -258,7 +258,6 @@ body
 
 //блок с консультациями
 .consultations
-    background-color: #f4f4f4
     .consultations__container
         background-color: #fff
         border-bottom: 4px solid #F4F4F4
@@ -339,14 +338,93 @@ body
     .consultations__container:first-child
         border-top: 2px solid #FC7C9D
 
-
-
-
-
-
-
-
-
-
-
 //блок с консультациями
+
+//правила
+.rules
+    padding: 0 0 50px 0
+    background-image: url(../../assets/img/other/green_gradient_bg.jpg)
+    background-position-y: bottom
+    background-repeat: no-repeat
+    background-size: 100%
+    ul
+        counter-reset: none
+        margin: 0 0 0 20px
+        li
+            list-style-type: disc
+            counter-reset: none
+            padding: 0 0 8px 0
+    .rules__list
+        counter-reset: paragraph-counter
+        p
+            counter-increment: paragraph-counter
+            display: flex
+    p::before
+        content: counter(paragraph-counter) ". "
+        margin: 0 10px 0 0
+//правила
+
+
+// страница список психологов
+.doctors__item:hover
+    transition: 0.3s
+    transform: scale(1.03)
+    cursor: default
+.doctors__item
+    display: flex
+    align-items: center
+    margin: 0 0 30px 0
+    position: relative
+    transition: 0.3s
+    .doctors__photo
+        z-index: 2
+        position: relative
+        img
+            width: 190px
+            object-fit: contain
+    .doctors__about
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        padding: 20px 30px 8px 10%
+        background-color: #fff
+        border-radius: 20px
+        position: relative
+        left: -20%
+        z-index: 1
+        margin: 0 0 0 12%
+        box-shadow: 3px 2px 7px 0 #0000003d
+        .doctors__about_title
+            .direction
+                color: #5A3A51
+                font-weight: 600
+                font-size: 1.6rem
+                text-align: center
+                margin-bottom: 15px
+            .direction::after
+                content: '—'
+                margin: 0 10px 0 10px
+            .name
+                font-weight: 600
+        .doctors__about_desc
+            p
+                margin: 8px 0
+                font-size: 1.4rem
+                line-height: 18px
+        .show__more
+            font-size: 1.2rem
+            text-decoration: underline
+            cursor: pointer
+            color: #7B7B7B
+        .doctors__about_full
+            display: none
+        .active
+            display: initial
+            p  
+                font-size: 1.4rem
+                margin: 10px 0
+                line-height: 18px
+
+
+// страница список психологов
