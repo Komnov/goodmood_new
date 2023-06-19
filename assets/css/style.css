@@ -627,6 +627,10 @@ body {
 .consultations .consultations__container .consultations__item .consultations__start :hover {
   text-decoration: underline;
 }
+.consultations #not__purchased .consultations__buy button {
+  background-color: #836B7D;
+  color: #fff;
+}
 .consultations #purchased .cancel button {
   background-color: #836B7D;
   color: #fff;
@@ -776,6 +780,10 @@ body {
   }
   .mob__hidden {
     display: none;
+  }
+  .callback__form .callback__form_container .agree input {
+    position: relative;
+    top: 2px;
   }
 }
 @media (max-width: 1460px) {
@@ -1000,5 +1008,14 @@ body {
     background-color: #ececec;
     margin: 0px 0 0 0 !important;
     grid-column: 1/-1;
+  }
+}
+@media (max-width: 760px) {
+  .callback__form .callback__form_container .agree {
+    justify-content: center;
+  }
+  .callback__form .callback__form_container .agree .callback__form_agree {
+    display: inline-block;
+    max-width: 60%;
   }
 }
