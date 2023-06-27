@@ -428,6 +428,9 @@ body {
   height: 100%;
   background-repeat: no-repeat;
 }
+.index__doctors .index__doctors_list {
+  padding-bottom: 15%;
+}
 
 .business__start .business__start_title {
   padding: 0 0 40px 0;
@@ -442,7 +445,7 @@ body {
 .benefits {
   background-image: url(../../assets/img/other/bg_circle.jpg);
   padding: 60px 0;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .benefits .benefits_txt .title {
@@ -457,7 +460,7 @@ body {
 }
 
 .registartion {
-  margin: 8% 0 4% 0;
+  margin: 5% 0 4% 0;
 }
 
 .default__title {
@@ -511,6 +514,7 @@ body {
   border: 1px solid #D7D7D7;
   padding: 10px 12px;
   width: 50%;
+  min-width: 300px;
 }
 .default__form .input__list :not(:last-child) {
   margin-bottom: 5px;
@@ -544,6 +548,16 @@ body {
 .default__form .input__list .agree .verify__code {
   line-height: 22px;
   text-align: center;
+}
+.default__form .input__list .forgot__pass a {
+  color: #7B7B7B;
+  text-decoration: underline;
+  margin: 15px 0 20px 0;
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.default__form .input__list .forgot__pass a:hover {
+  color: #000;
 }
 .default__form .input__list .callback__btn div {
   font-size: 1.6rem;
@@ -595,51 +609,43 @@ body {
   font-weight: 600;
   margin: 0 0 10px 0;
 }
-.consultations .consultations__container .consultations__item .consultations__buy {
-  display: flex;
-  height: 100%;
-}
-.consultations .consultations__container .consultations__item .consultations__buy button {
-  border: none;
-  outline: none;
-  font-weight: 600;
-  padding: 55px 35px;
-  width: 150px;
-}
-.consultations .consultations__container .consultations__item .consultations__buy :hover {
-  transition: 0.3s;
-  transform: scale(1.03);
-}
-.consultations .consultations__container .consultations__item .buy button {
-  background-color: #FFC700;
-  color: #000;
-}
-.consultations .consultations__container .consultations__item .consultations__start {
-  height: 100%;
+.consultations .consultations__container .consultations__item .consultations__interaction {
   display: flex;
   align-items: center;
-  margin: 0 0 0 30px;
 }
-.consultations .consultations__container .consultations__item .consultations__start a {
+.consultations .consultations__container .consultations__item .consultations__interaction button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 150px;
+  border: none;
+  margin: 0 4px 0 0;
+  transition: 0.3s;
+}
+.consultations .consultations__container .consultations__item .consultations__interaction button a {
   color: #5A3A51;
   font-weight: 600;
 }
-.consultations .consultations__container .consultations__item .consultations__start :hover {
-  text-decoration: underline;
+.consultations .consultations__container .consultations__item .consultations__interaction .buy {
+  background-color: #FFC700;
 }
-.consultations #not__purchased .consultations__buy button {
-  background-color: #836B7D;
-  color: #fff;
+.consultations .consultations__container .consultations__item .consultations__interaction .cancel {
+  background-color: rgba(171, 171, 171, 0.4392156863);
 }
-.consultations #purchased .cancel button {
-  background-color: #836B7D;
-  color: #fff;
+.consultations .consultations__container .consultations__item .consultations__interaction .cancel a {
+  color: #ababab;
 }
-.consultations .passed #off a {
-  color: #E0E0E0;
+.consultations .consultations__container .consultations__item .consultations__interaction .consultations__start {
+  background-color: #C7CD9F;
 }
-.consultations .passed #off :hover {
-  text-decoration: none;
+.consultations .consultations__container .consultations__item .consultations__interaction .performed {
+  background-color: #FFC700;
+}
+.consultations .consultations__container .consultations__item .consultations__interaction button:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 #consultations_passed {
@@ -679,15 +685,10 @@ body {
   counter-reset: none;
   padding: 0 0 8px 0;
 }
-.rules .rules__list {
-  counter-reset: paragraph-counter;
-}
-.rules .rules__list p {
-  counter-increment: paragraph-counter;
-  display: flex;
+.rules .rules__list p a {
+  text-decoration: underline;
 }
 .rules p::before {
-  content: counter(paragraph-counter) ". ";
   margin: 0 10px 0 0;
 }
 
@@ -800,7 +801,7 @@ body {
   }
   #header .container .header__menu_nav ul li {
     font-size: 1.4rem !important;
-    margin: 0 10px 0 0 !important;
+    margin: 0 20px 0 0 !important;
   }
   .callback_btn a {
     font-size: 1.6rem;
@@ -815,9 +816,24 @@ body {
   }
 }
 @media (max-width: 1200px) {
+  #header .container .header__row .header__main .header__main_logo a {
+    margin: 0 20px 0 0;
+  }
+  #header .container .header__row .header__main .header__main_phone {
+    font-size: 1.4rem;
+  }
+  #header .container .header__menu_nav ul li {
+    margin: 0 10px 0 0 !important;
+  }
   .index__help .index__help_phone a {
     top: 40%;
     font-size: 3.6rem;
+  }
+}
+@media (max-width: 1100px) {
+  #header .container .header__menu_nav ul li {
+    font-size: 1.4rem !important;
+    margin: 0 10px 0 0 !important;
   }
 }
 @media (max-width: 992px) {
@@ -849,10 +865,18 @@ body {
     font-weight: 600;
     font-size: 2rem;
   }
+  .callback_btn {
+    display: flex;
+    justify-content: flex-end;
+  }
   .callback_btn a {
     display: inline-block;
     white-space: nowrap;
     padding: 15px 20px;
+  }
+  .mobile__nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .mobile__nav ul li {
     margin: 20px 0 0 0;
@@ -954,6 +978,7 @@ body {
   }
   .default__form .input__list input {
     width: 100%;
+    min-width: initial;
   }
   .subtitle {
     display: flex;
@@ -988,26 +1013,33 @@ body {
     max-width: initial;
     height: 100%;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
   }
   .consultations .consultations__container .consultations__item .consultations_main {
     flex-direction: column;
     max-width: initial;
+    width: 50%;
   }
-  .consultations .consultations__container .consultations__buy {
-    width: initial;
-    justify-content: flex-end;
+  .consultations .consultations__container .consultations__item .consultations__interaction {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
   }
-  .consultations .consultations__container .consultations__start {
+  .consultations .consultations__container .consultations__item .consultations__interaction .consultations__start {
+    margin: 0px 0 4px 0;
+    order: 1;
+  }
+  .consultations .consultations__container .consultations__item .consultations__interaction .buy {
     margin: 0 0;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    padding: 15px 0px 20px 0px;
-    background-color: #ececec;
-    margin: 0px 0 0 0 !important;
-    grid-column: 1/-1;
+    order: 2;
+  }
+  .consultations .consultations__container .consultations__item .consultations__interaction .cancel {
+    order: 2;
+    margin: 0 0;
+  }
+  .consultations .consultations__container .consultations__item .consultations__interaction .performed {
+    margin: 0 0 4px 0;
   }
 }
 @media (max-width: 760px) {

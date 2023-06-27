@@ -37,7 +37,7 @@
                 ul 
                     li
                         font-size: 1.4rem!important
-                        margin: 0 10px 0 0!important
+                        margin: 0 20px 0 0!important
     .callback_btn 
         a
             font-size: 1.6rem
@@ -54,11 +54,35 @@
 
 
 @media (max-width: 1200px) 
+    #header 
+        .container
+            .header__row 
+                .header__main 
+                    .header__main_logo 
+                        a
+                            margin: 0 20px 0 0
+                    .header__main_phone
+                        font-size: 1.4rem
+            .header__menu_nav 
+                ul 
+                    li
+                        margin: 0 10px 0 0!important
     .index__help 
         .index__help_phone 
             a
                 top: 40%
                 font-size: 3.6rem
+
+// @media (max-width: 1200px) 
+
+@media (max-width: 1100px) 
+    #header 
+        .container
+            .header__menu_nav 
+                ul 
+                    li
+                        font-size: 1.4rem!important
+                        margin: 0 10px 0 0!important
 
 // @media (max-width: 1200px) 
 
@@ -85,12 +109,16 @@
                 font-weight: 600
                 font-size: 2rem
     .callback_btn
+        display: flex
+        justify-content: flex-end
         a
             display: inline-block
             white-space: nowrap
             padding: 15px 20px
     .mobile__nav
         ul
+            display: grid
+            grid-template-columns: 1fr 1fr
             li
                 margin: 20px 0 0 0
                 a
@@ -183,6 +211,7 @@
         .input__list 
             input
                 width: 100%
+                min-width: initial
     .subtitle
         display: flex
         flex-direction: column
@@ -214,23 +243,28 @@
                 max-width: initial
                 height: 100%
                 padding: 0 20px
-                display: grid
-                grid-template-columns: repeat(2, 1fr)
+                display: flex
+                flex-wrap: wrap
                 .consultations_main
                     flex-direction: column
                     max-width: initial
-            .consultations__buy
-                width: initial
-                justify-content: flex-end
-            .consultations__start
-                margin: 0 0
-                text-align: center
-                justify-content: center
-                width: 100%
-                padding: 15px 0px 20px 0px
-                background-color: #ececec
-                margin: 0px 0 0 0!important
-                grid-column: 1 / -1
+                    width: 50%
+                .consultations__interaction
+                    width: 50%
+                    display: flex
+                    flex-direction: column
+                    button
+                    .consultations__start
+                        margin: 0px 0 4px 0
+                        order: 1
+                    .buy
+                        margin: 0 0
+                        order: 2
+                    .cancel
+                        order: 2
+                        margin: 0 0
+                    .performed
+                        margin: 0 0 4px 0
 // @media (max-width: 992px) 
 
 
