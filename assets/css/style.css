@@ -712,8 +712,10 @@ body {
 }
 .doctors__item .doctors__photo img {
   width: 190px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
 }
 .doctors__item .doctors__about {
   display: flex;
@@ -765,10 +767,22 @@ body {
   margin: 10px 0;
   line-height: 18px;
 }
+.doctors__item .doctors__about .active ul {
+  padding: 5px 0 5px 20px;
+}
+.doctors__item .doctors__about .active li {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  line-height: 18px;
+  list-style-type: disc;
+}
 
 @media (min-width: 992px) {
   body {
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   .container {
     max-width: 1300px;
@@ -786,6 +800,9 @@ body {
   .callback__form .callback__form_container .agree input {
     position: relative;
     top: 2px;
+  }
+  #footer {
+    margin-top: auto;
   }
 }
 @media (max-width: 1460px) {
