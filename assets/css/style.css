@@ -701,7 +701,7 @@ body {
 
 .doctors__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 0 30px 0;
   position: relative;
   transition: 0.3s;
@@ -745,10 +745,35 @@ body {
 .doctors__item .doctors__about .doctors__about_title .name {
   font-weight: 600;
 }
+.doctors__item .doctors__about .doctors__about_desc {
+  overflow: hidden;
+  height: 115px;
+  transition: height 0.3s ease-in-out;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
 .doctors__item .doctors__about .doctors__about_desc p {
   margin: 8px 0;
   font-size: 1.4rem;
   line-height: 18px;
+}
+.doctors__item .doctors__about .doctors__about_desc ul {
+  padding: 5px 0 5px 20px;
+}
+.doctors__item .doctors__about .doctors__about_desc li {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  line-height: 18px;
+  list-style-type: disc;
+}
+.doctors__item .doctors__about .show {
+  height: initial;
+  display: initial;
+  overflow: initial;
+  -webkit-line-clamp: initial;
+  transition: height 0.3s ease-in-out;
 }
 .doctors__item .doctors__about .show__more {
   font-size: 1.2rem;
@@ -766,15 +791,6 @@ body {
   font-size: 1.4rem;
   margin: 10px 0;
   line-height: 18px;
-}
-.doctors__item .doctors__about .active ul {
-  padding: 5px 0 5px 20px;
-}
-.doctors__item .doctors__about .active li {
-  font-size: 1.4rem;
-  margin: 10px 0;
-  line-height: 18px;
-  list-style-type: disc;
 }
 
 @media (min-width: 992px) {
@@ -1009,6 +1025,7 @@ body {
   }
   .doctors__item {
     flex-direction: column;
+    align-items: center;
     background-color: #fff;
     box-shadow: 3px 2px 7px 0 rgba(0, 0, 0, 0.2392156863);
     border-radius: 20px;
@@ -1023,6 +1040,9 @@ body {
     left: initial;
     background-color: transparent;
     box-shadow: none;
+  }
+  .doctors__item .doctors__about .show__more {
+    margin: 10px 0 0 0;
   }
   .consultations .consultations__container {
     margin: 0 0 20px 0;

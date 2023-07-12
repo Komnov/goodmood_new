@@ -375,7 +375,7 @@ body
     cursor: default
 .doctors__item
     display: flex
-    align-items: center
+    align-items: flex-start
     margin: 0 0 30px 0
     position: relative
     transition: 0.3s
@@ -413,10 +413,31 @@ body
             .name
                 font-weight: 600
         .doctors__about_desc
+            overflow: hidden
+            height: 115px
+            transition: height 0.3s ease-in-out
+            text-overflow: ellipsis
+            -webkit-line-clamp: 6
+            -webkit-box-orient: vertical
+            display: -webkit-box
             p
                 margin: 8px 0
                 font-size: 1.4rem
                 line-height: 18px
+            ul
+                padding: 5px 0 5px 20px
+            li
+                font-size: 1.4rem
+                margin: 10px 0
+                line-height: 18px
+                list-style-type: disc
+
+        .show
+            height: initial
+            display: initial
+            overflow: initial
+            -webkit-line-clamp: initial
+            transition: height 0.3s ease-in-out
         .show__more
             font-size: 1.2rem
             text-decoration: underline
@@ -430,13 +451,7 @@ body
                 font-size: 1.4rem
                 margin: 10px 0
                 line-height: 18px
-            ul
-                padding: 5px 0 5px 20px
-            li
-                font-size: 1.4rem
-                margin: 10px 0
-                line-height: 18px
-                list-style-type: disc
+            
 
 
 // страница список психологов
