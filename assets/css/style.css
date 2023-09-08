@@ -800,6 +800,7 @@ body {
   display: block;
   text-align: center;
   width: 100%;
+  font-weight: 600;
 }
 .page__404 .subtitle__404 {
   color: #5A3A51;
