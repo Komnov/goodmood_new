@@ -845,6 +845,14 @@ body {
   }
 }
 @media (max-width: 1460px) {
+  #header {
+    width: 100%;
+  }
+  #header .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1400px) {
   .index__start .index__titles .index__titles_btn {
     margin: 10% 0 5% 0;
   }
